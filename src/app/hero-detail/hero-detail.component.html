@@ -1,3 +1,6 @@
+<p>
+    <button (click)="location.back();">戻る</button>
+</p>
 <div *ngIf="hero">
     <h2>{{hero.name}}の情報</h2>
     <div>
@@ -9,4 +12,7 @@
             <input [(ngModel)]="hero.name" placeholder="ヒーロー名を記入してください。">
         </label>
     </div>
+</div>
+<div *ngIf="!hero">
+    ヒーローが見つかりません。
 </div>
