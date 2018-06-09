@@ -1,0 +1,12 @@
+<div *ngIf="hero">
+    <h2>{{hero.name}}の情報</h2>
+    <div>
+        <span>番号：</span>{{hero.id}}
+    </div>
+    <div>
+        <label>
+            ヒーロー名：
+            <input [(ngModel)]="hero.name" placeholder="ヒーロー名を記入してください。">
+        </label>
+    </div>
+</div>

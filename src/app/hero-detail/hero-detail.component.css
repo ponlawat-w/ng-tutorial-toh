@@ -1,0 +1,8 @@
+a.close {
+    color: #5555aa;
+    text-decoration: none;
+}
+
+a.close:hover {
+    text-decoration: underline;
+}

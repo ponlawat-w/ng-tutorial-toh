@@ -1,0 +1,13 @@
+ul.heroes li {
+    cursor: pointer;
+}
+
+ul.heroes li:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+ul.heroes li.selected {
+    color: #333;
+    font-weight: bold;
+}
