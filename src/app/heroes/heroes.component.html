@@ -1,6 +1,19 @@
 <h2>ヒーローズ一覧</h2>
 <ul class="heroes">
-    <li *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
+    <li *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}">{{hero.id}}番　{{hero.name}}</a>
+        &nbsp;
+        <button (click)="delete(hero);">削除</button>
     </li>
 </ul>
+<hr>
+<div>
+    <h4>ヒーロー新規</h4>
+    <label>
+        ヒーロー名
+        <input #heroName />
+    </label>
+    <button (click)="add(heroName.value); heroName.value = '';">
+        新規
+    </button>
+</div>

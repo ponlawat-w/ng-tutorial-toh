@@ -1,13 +1,9 @@
-ul.heroes li {
-    cursor: pointer;
+ul.heroes a {
+    color: #444444;
+    text-decoration: none;
 }
 
-ul.heroes li:hover {
+ul.heroes a:hover {
     color: #000;
     text-decoration: underline;
-}
-
-ul.heroes li.selected {
-    color: #333;
-    font-weight: bold;
 }

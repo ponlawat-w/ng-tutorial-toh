@@ -12,6 +12,11 @@
             <input [(ngModel)]="hero.name" placeholder="ヒーロー名を記入してください。">
         </label>
     </div>
+    <div>
+        <button (click)="save();">保存</button>
+        &nbsp;
+        <a href="javascript:void(0);" (click)="delete();">削除</a>
+    </div>
 </div>
 <div *ngIf="!hero">
     ヒーローが見つかりません。

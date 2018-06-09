@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { Hero } from './../hero';
@@ -14,11 +14,11 @@ import { HeroService } from './../hero.service';
 
 export class HeroDetailComponent implements OnInit {
 
-  @Input() hero: Hero;
-  @Input() closeFunction: Function;
+  hero: Hero;
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private location: Location,
     private heroService: HeroService
   ) { }
@@ -31,4 +31,18 @@ export class HeroDetailComponent implements OnInit {
     });
   }
 
+  save(): void {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => { this.location.back(); } );
+  }
+
+  delete(): void {
+    if (!confirm(this.hero.name + 'を削除しますか？')) {
+      return;
+    }
+
+    this.heroService.deleteHero(this.hero).subscribe(() => {
+      this.router.navigate(['/heroes']);
+    });
+  }
 }

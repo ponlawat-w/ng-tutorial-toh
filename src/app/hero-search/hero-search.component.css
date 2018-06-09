@@ -1,0 +1,8 @@
+ul.search-result a {
+    color: #ee6600;
+    text-decoration: none;
+}
+
+ul.search-result a:hover {
+    text-decoration: underline;
+}
