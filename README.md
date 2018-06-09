@@ -1,4 +1,14 @@
-# TutorialToh
+# TutorialToh (Tour of Heroes)
+
+https://angular.jp/tutorial
+
+チュートリアルで自分の初Angularアプリを作ってみました（少しの編集があります）
+
+日本語も勉強しているので、内容はほぼ全部日本語化をしました。
+
+第8課（ＨＴＴＰ）のパーツはチュートリアルのようにIn-Memory Web APIを使わずに、自分のPHPサバーを使用します。
+
+---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
